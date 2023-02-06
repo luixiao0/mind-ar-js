@@ -1,6 +1,6 @@
 import { memory, nextFrame } from "@tensorflow/tfjs";
 const tf = { memory, nextFrame };
-import ControllerWorker from "./controller.worker";
+import ControllerWorker from "./controller2";
 import { Tracker } from "./tracker/tracker";
 import { CropDetector } from "./detector/crop-detector";
 import { Compiler } from "./compiler";
