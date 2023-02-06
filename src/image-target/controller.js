@@ -1,6 +1,6 @@
 import { memory, nextFrame } from "@tensorflow/tfjs";
 const tf = { memory, nextFrame };
-// import ControllerWorker from "./controller.worker.js?worker&inline";
+import ControllerWorker from "./controller.worker";
 import { Tracker } from "./tracker/tracker";
 import { CropDetector } from "./detector/crop-detector";
 import { Compiler } from "./compiler";
@@ -68,8 +68,8 @@ class Controller {
       far: far,
     });
 
-    // this.worker = new ControllerWorker(); 
-    this.worker = new Worker(new URL('./controller.worker.js', import.meta.url));
+    this.worker = new ControllerWorker(); 
+    // this.worker = new Worker(new URL('./controller.worker.js', import.meta.url));
     this.workerMatchDone = null;
     this.workerTrackDone = null;
     this.worker.onmessage = (e) => {
