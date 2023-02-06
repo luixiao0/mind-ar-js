@@ -4,7 +4,7 @@
   "description": "web augmented reality framework",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --config vite.config.dev.js",
+    "dev": "vite --config vite.config.dev.js --host 0.0.0.0",
     "watch": "vite build --watch --config vite.config.dev.js",
     "build-dev": "vite build --config vite.config.dev.js",
     "build": "vite build --config vite.config.prod.js"
@@ -22,7 +22,6 @@
     "aframe",
     "web augmented reality",
     "image tracking",
-    "face tracking",
     "tensorflowjs",
     "mediapipe"
   ],
@@ -36,6 +35,7 @@
     "mathjs": "^11.4.0",
     "ml-matrix": "^6.6.0",
     "svd-js": "^1.1.1",
+    "three": "^0.149.0",
     "tinyqueue": "^2.0.3"
   },
   "peerDependencies": {
@@ -47,5 +47,8 @@
   "files": [
     "dist/",
     "src/"
-  ]
+  ],
+  "browser": {
+    "crypto": false
+  }
 }

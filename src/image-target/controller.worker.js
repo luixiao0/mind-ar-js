@@ -1,6 +1,5 @@
 import { Matcher } from './matching/matcher.js';
 import { Estimator } from './estimation/estimator.js';
-
 let projectionTransform = null;
 let matchingDataList = null;
 let debugMode = false;
